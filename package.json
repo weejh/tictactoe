@@ -4,11 +4,12 @@
   "description": "game tic tac toe",
   "main": "game.js",
   "scripts": {
-    "start": "npm run build && http-server game",
+    "start": "npm run build && http-server dist",
     "test": "standard",
     "clean": "rm -rf dist",
-    "bulid": "npm run clean && mkdir dist && npm run build-html && npm run build-css & npm run build-js",
+    "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp index.html dist",
+    "build-css": "cp game.css dist",
     "build-js": "browserify game.js --outfile dist/game.dist.js --transform babelify"
   },
   "repository": {
