@@ -1,0 +1,69 @@
+body {
+  background-color: black;
+  font-size: 0px;
+  padding: 0px;
+
+}
+
+.row1, .row2, .row3 {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tile {
+  font-family: sans-serif;
+  height: 200px;
+  width: 200px;
+  color: white;
+  vertical-align: top;
+  text-align: center;
+  font-size: 160px;
+  border: 1px solid white;
+  margin: 3px 3px 3px 3px;
+  border-radius: 8px;
+  /*display: flex;
+  justify-content: space-between;*/
+  /**/
+}
+.tile:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background: #1C1F1E;
+}
+.status, .clear {
+  font-family:sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+.status {
+  padding: 10px;
+}
+button {
+  background: grey;
+  border-radius: 13px;
+  font-family: Courier New;
+  color: white;
+  font-size: 30px;
+  padding: 10px 200px 10px 200px;
+  text-decoration: none;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background: lightgrey;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes blink {
+  50% {opacity: 0.5;}
+}
