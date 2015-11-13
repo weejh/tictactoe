@@ -1,8 +1,8 @@
 var currentPlayer = 'one'
 var body = document.querySelector('body')
-var readBoard =[null, null, null,
+var readBoard = [ null, null, null,
                 null, null, null,
-              null, null, null,]
+                null, null, null ]
 var winners = [ ['0', '1', '2'],
                ['3', '4', '5'],
                ['6', '7', '8'],
@@ -35,7 +35,7 @@ body.addEventListener('click', event => {
   if (currentPlayer === 'one') {
 // player one mark with 'x'
     tile.textContent = readBoard[tile.id] = 'X'
-    tile.style.backgroundColor =  'red'
+    tile.style.backgroundColor = 'red'
     tile.style.border = '1px solid red'
     tile.style.color = 'black'
     tile.fontSize = 160
@@ -59,8 +59,8 @@ body.addEventListener('click', event => {
     var winner = 'one'
     console.log('checkwinner')
     currentPlayer === 'one' ? winner = 'two' : winner
-    winner === 'one' ? alert ('Game over, X wins') : alert ('Game over, O wins')
-    fillUp ()
+    winner === 'one' ? window.alert('Game over, X wins') : window.alert('Game over, O wins')
+    fillUp()
   }
 /*  if (checkwinner() === 'X') {
     alert('Game over, X wins')
@@ -75,7 +75,7 @@ body.addEventListener('click', event => {
 // function to fill up the reminding tile so no input is accepted
 function fillUp () {
   var divs1 = Array.from(document.querySelectorAll('.tile'))
-  divs1.forEach (tile => {
+  divs1.forEach(tile => {
     if (tile.textContent === '') {
       tile.textContent = '.'
       tile.style.color = 'black'
@@ -87,13 +87,13 @@ function fillUp () {
 // reset all tile
 function reSet () {
   var divs1 = Array.from(document.querySelectorAll('.tile'))
-  divs1.forEach (tile => {
+  divs1.forEach(tile => {
     tile.textContent = ''
     tile.style.backgroundColor = 'black'
     tile.style.border = '1px solid white'
     tile.style.animation = ''
   })
-  readBoard.forEach ( (cell, index) => {
+  readBoard.forEach((cell, index) => {
     readBoard[index] = null
   })
 }
@@ -101,7 +101,7 @@ function reSet () {
 // function to check for winner
 function checkwinner () {
   return winners.some((winnner) => {
-    return threeInrow (winnner)
+    return threeInrow(winnner)
   })
 }
 function threeInrow (winnner) {
@@ -109,9 +109,9 @@ function threeInrow (winnner) {
   var second = readBoard[winnner[1]]
   var third = readBoard[winnner[2]]
 // console.log(first);
-  if (first) { return first === second && first === third }
-    else {
-      return false }
+  if (first) {
+    return first === second && first === third
+  } else { return false }
 }
 
 /*  // 1

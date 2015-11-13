@@ -8,12 +8,12 @@
     "test": "standard",
     "clean": "rm -rf dist",
     "bulid": "npm run clean && mkdir dist && npm run build-html && npm run build-css & npm run build-js",
-    "build-html": "cp game/index.html dist",
-    "build-js": "browserify game/game.js --outfile dist/game.dist.js --transform babelify"
+    "build-html": "cp index.html dist",
+    "build-js": "browserify game.js --outfile dist/game.dist.js --transform babelify"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/weejh/wdi-sg-playground.git"
+    "url": "git+https://github.com/weejh/tictactoe.git"
   },
   "keywords": [
     "tictactoe",
@@ -22,7 +22,7 @@
   "author": "@weejh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/weejh/wdi-sg-playground/issues"
+    "url": "https://github.com/weejh/tictactoe.git"
   },
   "homepage": "https://github.com/weejh/wdi-sg-playground#readme",
   "dependencies": {
