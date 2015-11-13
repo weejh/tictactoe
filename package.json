@@ -5,8 +5,8 @@
   "main": "game.js",
   "scripts": {
     "start": "npm run build && npm run start-server",
-    "test": "standard",
     "start-server": "http-server dist",
+    "test": "standard",  
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp index.html dist",
