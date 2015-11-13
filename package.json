@@ -4,13 +4,15 @@
   "description": "game tic tac toe",
   "main": "game.js",
   "scripts": {
-    "start": "npm run build && http-server dist",
+    "start": "npm run build && npm run start-server",
     "test": "standard",
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp index.html dist",
     "build-css": "cp game.css dist",
-    "build-js": "browserify game.js --outfile dist/game.dist.js --transform babelify"
+    "build-js": "browserify game.js --outfile dist/game.dist.js --transform babelify",
+    "watch": "npm run build && npm run watch-js & npm run start-server",
+    "watch-js": "watchify game.js --outfile dist/game.js --transform babelify --verbose"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
     "babel-preset-stage-0": "^6.1.2",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "http-server": "^0.8.5"
+    "http-server": "^0.8.5",
+    "watchify": "^3.6.0"
   }
 }
